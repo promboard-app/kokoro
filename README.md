@@ -9,7 +9,7 @@
 같은 노드에서 목소리만 바꿔 읽혔습니다. 각 소리의 위 띠는 파형, 아래 띠는 스펙트로그램(가로 = 시간, 세로 = 소리 높낮이, 밝을수록 큰 소리)입니다. 듣기: [af_heart](docs/ko/audio/af-heart-en.mp3?raw=true) · [bf_emma](docs/ko/audio/bf-emma-en.mp3?raw=true) · [ef_dora](docs/ko/audio/ef-dora-es.mp3?raw=true)
 
 - 플러그인 id: `promboard.kokoro`
-- 필요한 앱: PromBoard 1.0.2 이상
+- 필요한 앱: PromBoard 1.0.3 이상
 - 지원 언어: 미국 영어 · 영국 영어 · 스페인어 · 프랑스어 · 힌디어 · 이탈리아어 · 브라질 포르투갈어. **한국어는 없습니다.**
 - 라이선스: 플러그인 코드 GPL-3.0-or-later(발음 변환에 쓰는 phonemizer · espeak-ng 가 GPL-3.0 이라 따릅니다). 모델은 Apache-2.0
 
@@ -88,7 +88,7 @@ README 그림 · 소리 다시 만들기: 노드 결과 WAV 를 hero.json 의 `w
 Same node, only the voice changed. For each sound the upper strip is the waveform and the lower strip is the spectrogram (time to the right, pitch upward, brighter = louder). Listen: [af_heart](docs/en/audio/af-heart-en.mp3?raw=true) · [bf_emma](docs/en/audio/bf-emma-en.mp3?raw=true) · [ef_dora](docs/en/audio/ef-dora-es.mp3?raw=true)
 
 - Plugin id: `promboard.kokoro`
-- Requires PromBoard 1.0.2 or later
+- Requires PromBoard 1.0.3 or later
 - Languages: American English · British English · Spanish · French · Hindi · Italian · Brazilian Portuguese. **No Korean.**
 - License: plugin code GPL-3.0-or-later (it follows phonemizer and espeak-ng, used for pronunciation). Model: Apache-2.0.
 
