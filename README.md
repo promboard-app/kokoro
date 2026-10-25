@@ -6,7 +6,7 @@
 
 ![Kokoro 프리셋 목소리 세 가지(미국 영어 · 영국 영어 · 스페인어)로 읽은 결과의 파형 · 스펙트로그램](docs/ko/hero.png)
 
-같은 노드에서 목소리만 바꿔 읽혔습니다. 각 소리의 위 띠는 파형, 아래 띠는 스펙트로그램(가로 = 시간, 세로 = 소리 높낮이, 밝을수록 큰 소리)입니다. 듣기: [af_heart](docs/ko/audio/af-heart-en.mp3?raw=true) · [bf_emma](docs/ko/audio/bf-emma-en.mp3?raw=true) · [ef_dora](docs/ko/audio/ef-dora-es.mp3?raw=true)
+같은 노드에서 목소리만 바꿔 읽혔습니다. 각 소리의 위 띠는 파형, 아래 띠는 스펙트로그램(가로 = 시간, 세로 = 소리 높낮이, 밝을수록 큰 소리)입니다. 듣기: [af_heart](docs/ko/audio/af-heart-en.mp3?raw=true) · [bf_emma](docs/ko/audio/bf-emma-en.mp3?raw=true) · [ef_dora](docs/ko/audio/ef-dora-es.mp3?raw=true) (링크를 누르면 mp3 를 내려받습니다 — GitHub 화면은 소리를 재생하지 않습니다.)
 
 - 플러그인 id: `promboard.kokoro`
 - 필요한 앱: PromBoard 1.0.3 이상
@@ -85,7 +85,7 @@ README 그림 · 소리 다시 만들기: 노드 결과 WAV 를 hero.json 의 `w
 
 ![Waveform and spectrogram of three Kokoro preset voices (American English, British English, Spanish)](docs/en/hero.png)
 
-Same node, only the voice changed. For each sound the upper strip is the waveform and the lower strip is the spectrogram (time to the right, pitch upward, brighter = louder). Listen: [af_heart](docs/en/audio/af-heart-en.mp3?raw=true) · [bf_emma](docs/en/audio/bf-emma-en.mp3?raw=true) · [ef_dora](docs/en/audio/ef-dora-es.mp3?raw=true)
+Same node, only the voice changed. For each sound the upper strip is the waveform and the lower strip is the spectrogram (time to the right, pitch upward, brighter = louder). Listen: [af_heart](docs/en/audio/af-heart-en.mp3?raw=true) · [bf_emma](docs/en/audio/bf-emma-en.mp3?raw=true) · [ef_dora](docs/en/audio/ef-dora-es.mp3?raw=true) (The links download the mp3 files; GitHub does not play audio on the page.)
 
 - Plugin id: `promboard.kokoro`
 - Requires PromBoard 1.0.3 or later
