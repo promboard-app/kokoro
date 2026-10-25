@@ -1,0 +1,14 @@
+{"title": {"ko": "Kokoro-82M 프리셋 목소리 세 가지", "en": "Three Kokoro-82M preset voices"},
+ "items": [
+  {"wav": "heart-en.wav", "name": "af-heart-en", "label": {"ko": "af_heart · 미국 영어 · 여성 (A 등급)", "en": "af_heart · American English · female (grade A)"},
+   "text": "The morning market opens at seven. Fresh bread, ripe tomatoes and a basket of green apples wait on the wooden table, and the baker waves hello as the first customers arrive.",
+   "meta": {"ko": "11.4초 소리 · 첫 실행이라 51.1초", "en": "11.4 s of audio · 51.1 s on the first run"}},
+  {"wav": "emma-en.wav", "name": "bf-emma-en", "label": {"ko": "bf_emma · 영국 영어 · 여성 (B- 등급)", "en": "bf_emma · British English · female (grade B-)"},
+   "text": "The morning market opens at seven. Fresh bread, ripe tomatoes and a basket of green apples wait on the wooden table, and the baker waves hello as the first customers arrive.",
+   "meta": {"ko": "11.0초 소리 · 0.5초 걸림", "en": "11.0 s of audio in 0.5 s"}},
+  {"wav": "dora-es.wav", "name": "ef-dora-es", "label": {"ko": "ef_dora · 스페인어 · 여성", "en": "ef_dora · Spanish · female"},
+   "text": "El mercado de la mañana abre a las siete. Hay pan recién hecho, tomates maduros y una cesta de manzanas verdes sobre la mesa de madera.",
+   "meta": {"ko": "8.0초 소리 · 0.5초 걸림", "en": "8.0 s of audio in 0.5 s"}}
+ ],
+ "footer": {"ko": "RTX 4070 SUPER 12GB · 그래픽카드 메모리 최대 0.9GB · CPU(i7-14700K)만으로는 11.4초 소리에 1.8초", "en": "RTX 4070 SUPER 12 GB · peak GPU memory 0.9 GB · CPU only (i7-14700K): 11.4 s of audio in 1.8 s"},
+ "out": "hero.png"}

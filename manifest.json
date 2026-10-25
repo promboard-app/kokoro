@@ -1,0 +1,582 @@
+{
+  "schema": 1,
+  "id": "promboard.kokoro",
+  "version": "1.0.0",
+  "name": "Kokoro-82M — 가벼운 프리셋 목소리 (영어 등 7개 언어)",
+  "description": "글을 읽어 목소리(WAV)로 만든다. hexgrad 공식 Kokoro-82M(82M, 약 0.36GB)의 프리셋 목소리 41개 중 하나를 고른다. 미국 · 영국 영어, 스페인어, 프랑스어, 힌디어, 이탈리아어, 브라질 포르투갈어를 읽는다. 한국어는 없고, 목소리 복제도 없다. 그래픽카드 없이 CPU 로도 빠르게 돈다. 모델은 Apache-2.0 이라 상업에도 쓸 수 있다.",
+  "author": "PromBoard",
+  "license": "GPL-3.0-or-later",
+  "app": ">=1.0.2",
+  "repository": "https://github.com/promboard-app/kokoro",
+  "icon": "icon.png",
+  "contents": [
+    "nodes"
+  ],
+  "nodes": [
+    {
+      "id": "kokoro",
+      "label": "Kokoro 목소리",
+      "description": "읽을 글을 이으면 고른 프리셋 목소리로 읽은 WAV(24kHz)를 낸다. 언어는 목소리마다 정해져 있다 — 글은 그 목소리의 언어로 쓴다. 괄호 안은 공식 목소리 등급(A 가 가장 좋다). 줄을 바꾸면 그 자리에서 끊어 읽는다.",
+      "inputs": [
+        {
+          "id": "text",
+          "type": "text",
+          "label": "읽을 글",
+          "required": true
+        }
+      ],
+      "outputs": [
+        {
+          "id": "audio",
+          "type": "audio",
+          "label": "목소리"
+        }
+      ],
+      "settings": [
+        {
+          "id": "voice",
+          "label": "목소리",
+          "help": "언어 · 성별 · 이름(공식 등급). 글은 고른 목소리의 언어로 쓴다.",
+          "type": "select",
+          "options": [
+            {
+              "value": "af_heart",
+              "label": "미국 영어 · 여 · Heart (A)"
+            },
+            {
+              "value": "af_alloy",
+              "label": "미국 영어 · 여 · Alloy (C)"
+            },
+            {
+              "value": "af_aoede",
+              "label": "미국 영어 · 여 · Aoede (C+)"
+            },
+            {
+              "value": "af_bella",
+              "label": "미국 영어 · 여 · Bella (A-)"
+            },
+            {
+              "value": "af_jessica",
+              "label": "미국 영어 · 여 · Jessica (D)"
+            },
+            {
+              "value": "af_kore",
+              "label": "미국 영어 · 여 · Kore (C+)"
+            },
+            {
+              "value": "af_nicole",
+              "label": "미국 영어 · 여 · Nicole (B-)"
+            },
+            {
+              "value": "af_nova",
+              "label": "미국 영어 · 여 · Nova (C)"
+            },
+            {
+              "value": "af_river",
+              "label": "미국 영어 · 여 · River (D)"
+            },
+            {
+              "value": "af_sarah",
+              "label": "미국 영어 · 여 · Sarah (C+)"
+            },
+            {
+              "value": "af_sky",
+              "label": "미국 영어 · 여 · Sky (C-)"
+            },
+            {
+              "value": "am_adam",
+              "label": "미국 영어 · 남 · Adam (F+)"
+            },
+            {
+              "value": "am_echo",
+              "label": "미국 영어 · 남 · Echo (D)"
+            },
+            {
+              "value": "am_eric",
+              "label": "미국 영어 · 남 · Eric (D)"
+            },
+            {
+              "value": "am_fenrir",
+              "label": "미국 영어 · 남 · Fenrir (C+)"
+            },
+            {
+              "value": "am_liam",
+              "label": "미국 영어 · 남 · Liam (D)"
+            },
+            {
+              "value": "am_michael",
+              "label": "미국 영어 · 남 · Michael (C+)"
+            },
+            {
+              "value": "am_onyx",
+              "label": "미국 영어 · 남 · Onyx (D)"
+            },
+            {
+              "value": "am_puck",
+              "label": "미국 영어 · 남 · Puck (C+)"
+            },
+            {
+              "value": "am_santa",
+              "label": "미국 영어 · 남 · Santa (D-)"
+            },
+            {
+              "value": "bf_alice",
+              "label": "영국 영어 · 여 · Alice (D)"
+            },
+            {
+              "value": "bf_emma",
+              "label": "영국 영어 · 여 · Emma (B-)"
+            },
+            {
+              "value": "bf_isabella",
+              "label": "영국 영어 · 여 · Isabella (C)"
+            },
+            {
+              "value": "bf_lily",
+              "label": "영국 영어 · 여 · Lily (D)"
+            },
+            {
+              "value": "bm_daniel",
+              "label": "영국 영어 · 남 · Daniel (D)"
+            },
+            {
+              "value": "bm_fable",
+              "label": "영국 영어 · 남 · Fable (C)"
+            },
+            {
+              "value": "bm_george",
+              "label": "영국 영어 · 남 · George (C)"
+            },
+            {
+              "value": "bm_lewis",
+              "label": "영국 영어 · 남 · Lewis (D+)"
+            },
+            {
+              "value": "ef_dora",
+              "label": "스페인어 · 여 · Dora"
+            },
+            {
+              "value": "em_alex",
+              "label": "스페인어 · 남 · Alex"
+            },
+            {
+              "value": "em_santa",
+              "label": "스페인어 · 남 · Santa"
+            },
+            {
+              "value": "ff_siwis",
+              "label": "프랑스어 · 여 · Siwis (B-)"
+            },
+            {
+              "value": "hf_alpha",
+              "label": "힌디어 · 여 · Alpha (C)"
+            },
+            {
+              "value": "hf_beta",
+              "label": "힌디어 · 여 · Beta (C)"
+            },
+            {
+              "value": "hm_omega",
+              "label": "힌디어 · 남 · Omega (C)"
+            },
+            {
+              "value": "hm_psi",
+              "label": "힌디어 · 남 · Psi (C)"
+            },
+            {
+              "value": "if_sara",
+              "label": "이탈리아어 · 여 · Sara (C)"
+            },
+            {
+              "value": "im_nicola",
+              "label": "이탈리아어 · 남 · Nicola (C)"
+            },
+            {
+              "value": "pf_dora",
+              "label": "브라질 포르투갈어 · 여 · Dora"
+            },
+            {
+              "value": "pm_alex",
+              "label": "브라질 포르투갈어 · 남 · Alex"
+            },
+            {
+              "value": "pm_santa",
+              "label": "브라질 포르투갈어 · 남 · Santa"
+            }
+          ],
+          "default": "af_heart"
+        },
+        {
+          "id": "speed",
+          "label": "빠르기",
+          "help": "1 보다 크면 빠르게, 작으면 느리게 읽는다.",
+          "type": "number",
+          "default": 1,
+          "min": 0.5,
+          "max": 2,
+          "step": 0.05
+        }
+      ]
+    }
+  ],
+  "python": {
+    "version": "3.12",
+    "torch": "host",
+    "lock": {
+      "win": "nodes/requirements-win.txt",
+      "linux": "nodes/requirements-linux.txt",
+      "mac": "nodes/requirements-mac.txt"
+    },
+    "entry": "nodes.main"
+  },
+  "gpu": {
+    "vramMinMb": 0,
+    "cpuAllowed": true
+  },
+  "permissions": {},
+  "requires": {
+    "models": [
+      {
+        "source": "huggingface",
+        "repo": "hexgrad/Kokoro-82M",
+        "revision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
+        "license": "Apache-2.0",
+        "files": [
+          {
+            "path": "config.json",
+            "bytes": 2351,
+            "sha256": "5abb01e2403b072bf03d04fde160443e209d7a0dad49a423be15196b9b43c17f"
+          },
+          {
+            "path": "kokoro-v1_0.pth",
+            "bytes": 327212226,
+            "sha256": "496dba118d1a58f5f3db2efc88dbdc216e0483fc89fe6e47ee1f2c53f18ad1e4"
+          },
+          {
+            "path": "voices/af_alloy.pt",
+            "bytes": 523425,
+            "sha256": "6d877149dd8b348fbad12e5845b7e43d975390e9f3b68a811d1d86168bef5aa3"
+          },
+          {
+            "path": "voices/af_aoede.pt",
+            "bytes": 523425,
+            "sha256": "c03bd1a4c3716c2d8eaa3d50022f62d5c31cfbd6e15933a00b17fefe13841cc4"
+          },
+          {
+            "path": "voices/af_bella.pt",
+            "bytes": 523425,
+            "sha256": "8cb64e02fcc8de0327a8e13817e49c76c945ecf0052ceac97d3081480e8e48d6"
+          },
+          {
+            "path": "voices/af_heart.pt",
+            "bytes": 523425,
+            "sha256": "0ab5709b8ffab19bfd849cd11d98f75b60af7733253ad0d67b12382a102cb4ff"
+          },
+          {
+            "path": "voices/af_jessica.pt",
+            "bytes": 523435,
+            "sha256": "cdfdccb8cc975aa34ee6b89642963b0064237675de0e41a30ae64cc958dd4e87"
+          },
+          {
+            "path": "voices/af_kore.pt",
+            "bytes": 523420,
+            "sha256": "8bfbc512321c3db49dff984ac675fa5ac7eaed5a96cc31104d3a9080e179d69d"
+          },
+          {
+            "path": "voices/af_nicole.pt",
+            "bytes": 523430,
+            "sha256": "c5561808bcf5250fe8c5f5de32caf2d94f27e57e95befdb098c5c85991d4c5da"
+          },
+          {
+            "path": "voices/af_nova.pt",
+            "bytes": 523420,
+            "sha256": "e0233676ddc21908c37a1f102f6b88a59e4e5c1bd764983616eb9eda629dbcd2"
+          },
+          {
+            "path": "voices/af_river.pt",
+            "bytes": 523425,
+            "sha256": "e149459bd9c084416b74756b9bd3418256a8b839088abb07d463730c369dab8f"
+          },
+          {
+            "path": "voices/af_sarah.pt",
+            "bytes": 523425,
+            "sha256": "49bd364ea3be9eb3e9685e8f9a15448c4883112a7c0ff7ab139fa4088b08cef9"
+          },
+          {
+            "path": "voices/af_sky.pt",
+            "bytes": 523351,
+            "sha256": "c799548aed06e0cb0d655a85a01b48e7f10484d71663f9a3045a5b9362e8512c"
+          },
+          {
+            "path": "voices/am_adam.pt",
+            "bytes": 523420,
+            "sha256": "ced7e284aba12472891be1da3ab34db84cc05cc02b5889535796dbf2d8b0cb34"
+          },
+          {
+            "path": "voices/am_echo.pt",
+            "bytes": 523420,
+            "sha256": "8bcfdc852bc985fb45c396c561e571ffb9183930071f962f1b50df5c97b161e8"
+          },
+          {
+            "path": "voices/am_eric.pt",
+            "bytes": 523420,
+            "sha256": "ada66f0eefff34ec921b1d7474d7ac8bec00cd863c170f1c534916e9b8212aae"
+          },
+          {
+            "path": "voices/am_fenrir.pt",
+            "bytes": 523430,
+            "sha256": "98e507eca1db08230ae3b6232d59c10aec9630022d19accac4f5d12fcec3c37a"
+          },
+          {
+            "path": "voices/am_liam.pt",
+            "bytes": 523420,
+            "sha256": "c82550757ddb31308b97f30040dda8c2d609a9e2de6135848d0a948368138518"
+          },
+          {
+            "path": "voices/am_michael.pt",
+            "bytes": 523435,
+            "sha256": "9a443b79a4b22489a5b0ab7c651a0bcd1a30bef675c28333f06971abbd47bd37"
+          },
+          {
+            "path": "voices/am_onyx.pt",
+            "bytes": 523420,
+            "sha256": "e8452be16cd0f6da7b4579eaf7b1e4506e92524882053d86d72b96b9a7fed584"
+          },
+          {
+            "path": "voices/am_puck.pt",
+            "bytes": 523420,
+            "sha256": "dd1d8973f4ce4b7d8ae407c77a435f485dabc052081b80ea75c4f30b84f36223"
+          },
+          {
+            "path": "voices/am_santa.pt",
+            "bytes": 523425,
+            "sha256": "7f2f7582fa2b1f160e90aafe6d0b442a685e773608b6667e545d743b073e97a7"
+          },
+          {
+            "path": "voices/bf_alice.pt",
+            "bytes": 523425,
+            "sha256": "d292651b6af6c0d81705c2580dcb4463fccc0ff7b8d618a471dbb4e45655b3f3"
+          },
+          {
+            "path": "voices/bf_emma.pt",
+            "bytes": 523420,
+            "sha256": "d0a423deabf4a52b4f49318c51742c54e21bb89bbbe9a12141e7758ddb5da701"
+          },
+          {
+            "path": "voices/bf_isabella.pt",
+            "bytes": 523440,
+            "sha256": "cdd4c37003805104d1d08fb1e05855c8fb2c68de24ca6e71f264a30aaa59eefd"
+          },
+          {
+            "path": "voices/bf_lily.pt",
+            "bytes": 523420,
+            "sha256": "6e09c2e481e2d53004d7e5ae7d3a325369e130a6f45c35a6002de75084be9285"
+          },
+          {
+            "path": "voices/bm_daniel.pt",
+            "bytes": 523430,
+            "sha256": "fc3fce4e9c12ed4dbc8fa9680cfe51ee190a96444ce7c3ad647549a30823fc5d"
+          },
+          {
+            "path": "voices/bm_fable.pt",
+            "bytes": 523425,
+            "sha256": "d44935f3135257a9064df99f007fc1342ff1aa767552b4a4fa4c3b2e6e59079c"
+          },
+          {
+            "path": "voices/bm_george.pt",
+            "bytes": 523430,
+            "sha256": "f1bc812213dc59774769e5c80004b13eeb79bd78130b11b2d7f934542dab811b"
+          },
+          {
+            "path": "voices/bm_lewis.pt",
+            "bytes": 523425,
+            "sha256": "b5204750dcba01029d2ac9cec17aec3b20a6d64073c579d694a23cb40effbd0e"
+          },
+          {
+            "path": "voices/ef_dora.pt",
+            "bytes": 523420,
+            "sha256": "d9d69b0f8a2b87a345f269d89639f89dfbd1a6c9da0c498ae36dd34afcf35530"
+          },
+          {
+            "path": "voices/em_alex.pt",
+            "bytes": 523420,
+            "sha256": "5eac53f767c3f31a081918ba531969aea850bed18fe56419b804d642c6973431"
+          },
+          {
+            "path": "voices/em_santa.pt",
+            "bytes": 523430,
+            "sha256": "aa8620cb96cec705823efca0d956a63e158e09ad41aca934d354b7f0778f63cb"
+          },
+          {
+            "path": "voices/ff_siwis.pt",
+            "bytes": 523425,
+            "sha256": "8073bf2d2c4b9543a90f2f0fd2144de4ed157e2d4b79ddeb0d5123066171fbc9"
+          },
+          {
+            "path": "voices/hf_alpha.pt",
+            "bytes": 523425,
+            "sha256": "06906fe05746d13a79c5c01e21fd7233b05027221a933c9ada650f5aafc8f044"
+          },
+          {
+            "path": "voices/hf_beta.pt",
+            "bytes": 523420,
+            "sha256": "63c0a1a6272e98d43f4511bba40e30dd9c8ceaf5f39af869509b9f51a71c503e"
+          },
+          {
+            "path": "voices/hm_omega.pt",
+            "bytes": 523425,
+            "sha256": "b55f02a8e8483fffe0afa566e7d22ed8013acf47ad4f6bbee2795a840155703e"
+          },
+          {
+            "path": "voices/hm_psi.pt",
+            "bytes": 523351,
+            "sha256": "2f0f055cea4f1083f4ef127ece48d71606347f6557dbb961c0ca5740a2da485b"
+          },
+          {
+            "path": "voices/if_sara.pt",
+            "bytes": 523425,
+            "sha256": "6c0b253b955fe32f1a1a86006aebe83d050ea95afd0e7be15182f087deedbf55"
+          },
+          {
+            "path": "voices/im_nicola.pt",
+            "bytes": 523341,
+            "sha256": "234ed06648649f9bd874b37508ea17560b9c993ef85b4ddb3e3a71e062bd2c12"
+          },
+          {
+            "path": "voices/pf_dora.pt",
+            "bytes": 523425,
+            "sha256": "07e4ff987c5d5a8c3995efd15cc4f0db7c4c15e881b198d8ab7f67ecf51f5eb7"
+          },
+          {
+            "path": "voices/pm_alex.pt",
+            "bytes": 523425,
+            "sha256": "cf0ba8c573c2480fc54123683a35cf1e2ae130428e441eb91f9149bdb188a526"
+          },
+          {
+            "path": "voices/pm_santa.pt",
+            "bytes": 523430,
+            "sha256": "d42103169c5c872abbafb9129133af7e942bb9d272c3cc3b95c203e7d7198c29"
+          }
+        ]
+      },
+      {
+        "source": "huggingface",
+        "repo": "spacy/en_core_web_sm",
+        "revision": "8fb6f8155286360bf5486fe399e2738d1df7ded2",
+        "license": "MIT",
+        "files": [
+          {
+            "path": "attribute_ruler/patterns",
+            "bytes": 14735,
+            "sha256": "f8b97f7ebef9b8536bba5f0fc1e73af6183563e96e2325bcbb021b8c6dbc6683"
+          },
+          {
+            "path": "config.cfg",
+            "bytes": 5527,
+            "sha256": "65c545ca2da5bd4b87b22d4917318605360b37dee6ed6b18516a036f87319f79"
+          },
+          {
+            "path": "lemmatizer/lookups/lookups.bin",
+            "bytes": 972893,
+            "sha256": "eb64f40c0f8396d1762730c0ddf4dad2a52d138f5a389f71a1a1d088173b7737"
+          },
+          {
+            "path": "meta.json",
+            "bytes": 10085,
+            "sha256": "5fc475fbe5bb0317249fd7e51c22d53052345bb23f13eaf149ff590223964d1c"
+          },
+          {
+            "path": "ner/cfg",
+            "bytes": 221,
+            "sha256": "a7172edadafba9f472e9ac0f2660eec04b6405e471be9e20267b79c67288d22d"
+          },
+          {
+            "path": "ner/model",
+            "bytes": 6154601,
+            "sha256": "6f47ca062eb419c8ffb7d3023e6fbc4b2eb21dab14c5d49aa5e5586228b87405"
+          },
+          {
+            "path": "ner/moves",
+            "bytes": 1064,
+            "sha256": "d82b13473ebd33e0396004dd22f00c71fe3c1251742bf1f7c4554f23fd3b0af4"
+          },
+          {
+            "path": "parser/cfg",
+            "bytes": 222,
+            "sha256": "e2a240ef01f95e58f5dd4c9d6e90d61f597b8d998966570d3009dd81e8879780"
+          },
+          {
+            "path": "parser/model",
+            "bytes": 319909,
+            "sha256": "a1836fbc02b3924b2fd5f65325c58ae852ff112db1090ca724e5a801e68b85fd"
+          },
+          {
+            "path": "parser/moves",
+            "bytes": 1571,
+            "sha256": "ec41318c32eb7f9e4d8f050b2e8466ee67954d2d3455c1aec73abf46c82dd67f"
+          },
+          {
+            "path": "senter/cfg",
+            "bytes": 23,
+            "sha256": "2a4db4a729b6469da1f87d71cc7cd3ed2a73360cc85326821e850836c4671103"
+          },
+          {
+            "path": "senter/model",
+            "bytes": 197089,
+            "sha256": "e62c2504dcdc66144b30c048100af05f12207f933f6d669982b947ae71ffdeef"
+          },
+          {
+            "path": "tagger/cfg",
+            "bytes": 615,
+            "sha256": "d484c3d9391f37bf9c727aa2eb4c477a24cb103020f95e52dc37842818b50118"
+          },
+          {
+            "path": "tagger/model",
+            "bytes": 19829,
+            "sha256": "fb00ef592a2a464d95dd889ce424952ae7fd64e095153054c310345198cc0fc4"
+          },
+          {
+            "path": "tok2vec/cfg",
+            "bytes": 4,
+            "sha256": "f8a5a26e3056eb6fb06deeb3dbccfd88ae74900200c98c70b5966bbb7ec9d4de"
+          },
+          {
+            "path": "tok2vec/model",
+            "bytes": 6269370,
+            "sha256": "42d8414521eaf75f817bd1b351b26039a22a912bb2617f95ead305420f2ebffd"
+          },
+          {
+            "path": "tokenizer",
+            "bytes": 77066,
+            "sha256": "b014e8bba4958b120af2d0c1c63eabb7c00379f2bacaf10df7c5325efd2ea467"
+          },
+          {
+            "path": "vocab/key2row",
+            "bytes": 1,
+            "sha256": "76be8b528d0075f7aae98d6fa57a6d3c83ae480a8469e668d7b0af968995ac71"
+          },
+          {
+            "path": "vocab/lookups.bin",
+            "bytes": 70040,
+            "sha256": "fce9c883c56165f29573cc938c2a1c9d417ac61bd8f56b671dd5f7996de70682"
+          },
+          {
+            "path": "vocab/strings.json",
+            "bytes": 1103983,
+            "sha256": "b1966d1f07a05b68576df07f43f40203b4e11124ad82cc839e8312ad8d7fdae7"
+          },
+          {
+            "path": "vocab/vectors",
+            "bytes": 128,
+            "sha256": "14772b683e726436d5948ad3fff2b43d036ef2ebbe3458aafed6004e05a40706"
+          },
+          {
+            "path": "vocab/vectors.cfg",
+            "bytes": 22,
+            "sha256": "ff4359091952c8cd16f1f0482f5770fb82d1707368d5cca3c46aa501f552e3c5"
+          }
+        ]
+      }
+    ]
+  }
+}
